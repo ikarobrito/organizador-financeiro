@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organizador Financeiro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Organizador Financeiro</h1>
+    <div id="login-section">
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Senha" />
+      <button onclick="login()">Entrar</button>
+      <button onclick="signup()">Criar Conta</button>
+    </div>
+
+    <div id="app-section" class="hidden">
+      <button onclick="logout()">Sair</button>
+      <h2>Lançamentos</h2>
+      <form id="form">
+        <input type="text" id="descricao" placeholder="Descrição" required />
+        <input type="number" id="valor" placeholder="Valor" required />
+        <select id="tipo">
+          <option value="entrada">Entrada</option>
+          <option value="saida">Saída</option>
+        </select>
+        <button type="submit">Salvar</button>
+      </form>
+      <ul id="lista"></ul>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
